@@ -7,11 +7,6 @@ body {
   flex-direction: column;
 }
 
-.content {
-  display: flex;
-  flex-direction: row;
-  flex: 0 1 auto;
-}
 
 .header {
   height: 72px;
@@ -23,27 +18,34 @@ body {
   font-weight: 800;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
-  justify-self: end;
-  flex:  1 auto;
-  align-self: end;
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
 }
+
+
+/* 
+.footertext {
+  align-self: center;
+  justify-self: center;
+} */
 
 .sidebar {
   width: 300px;
   background: royalblue;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
   flex-wrap: nowrap;
+  justify-content: start;
+  /* padding: 10px; */
+  display: flex;
 }
 
 .cardcontainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding 10px;
+  padding: 15px;
 }
 
 .card {
@@ -51,13 +53,34 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   padding: 10px;
-  margin: 10px;
-  width: 300px;
+  margin: 30px;
+  width: 340px;
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
+.footer {
+  height: 72px;
+  width: 100vw;
+  background: #eee;
+  color: darkmagenta;
+  justify-self: center;
+  flex:  0 1 auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+ul {
+  /* justify-content: left; */
+  display: flex;
+  flex-direction: column;
+}
 
 li { 
   flex-wrap: nowrap;
+  list-style: none;
+  justify-self: start;
 }
 
 a {
